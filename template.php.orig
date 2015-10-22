@@ -23,7 +23,7 @@ function hk_adminimal_preprocess_maintenance_page(&$vars) {
 function hk_adminimal_preprocess_html(&$vars) {
 
   // Get adminimal folder path.
-  $adminimal_path = drupal_get_path('theme', 'adminimal');
+  $adminimal_path = drupal_get_path('theme', 'hk_adminimal_theme');
 
   // Add default styles.
   drupal_add_css($adminimal_path . '/css/reset.css', array('group' => CSS_THEME, 'media' => 'all', 'weight' => -999));
