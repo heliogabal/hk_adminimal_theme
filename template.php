@@ -1,5 +1,6 @@
 <?php
 drupal_add_library('system','ui.dialog');
+drupal_add_library('system', 'ui.tooltip');
 /**
  * @file
  * This file contains the main theme functions hooks and overrides.
@@ -23,7 +24,7 @@ function hk_adminimal_preprocess_maintenance_page(&$vars) {
 function hk_adminimal_preprocess_html(&$vars) {
 
   // Get adminimal folder path.
-  $adminimal_path = drupal_get_path('theme', 'hk_adminimal_theme');
+  $adminimal_path = drupal_get_path('theme', 'hk_adminimal');
 
   // Add default styles.
   drupal_add_css($adminimal_path . '/css/reset.css', array('group' => CSS_THEME, 'media' => 'all', 'weight' => -999));
@@ -419,4 +420,7 @@ function hk_adminimal_table($variables) {
   $output .= "</table>\n";
   $output .= "</div>\n";
   return $output;
+}
+function hk_adminimal_process_token_tree(&$variables) {
+  $variables['recursion_limit'] = variable_get('token_recursion_limit', 1);
 }

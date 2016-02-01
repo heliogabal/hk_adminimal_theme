@@ -50,12 +50,16 @@ body.adminimal-skin-material #views-form-admin-page-3 table.tableheader-processe
 }
 #views-form-admin-page-3 .views-field-field-objektid-nunumeric,
 #views-form-admin-page-3 .views-field-sid,
-#views-form-admin-page-3 .views-field-field-kategorie {
-  width: 8%;
+#views-form-admin-page-3 .views-field-field-kategorie,
+#views-form-admin-page-3 .views-field-field-apart-price-editable {
+  width: 7%;
+}
+#views-form-admin-page-3 .views-field-field-obj-schattenobjekt {
+  width: 5%;
 }
 #views-form-admin-page-3 .views-field-created,
 #views-form-admin-page-3 .views-field-changed {
-  width: 12%;
+  width: 10%;
 }
 #views-form-admin-page-3 table thead {
   border-top-right-radius: 5px;
@@ -122,4 +126,26 @@ body.adminimal-skin-material #views-form-admin-page-3 table.tableheader-processe
     font-size: 9px;
     padding: 5px 5px;
     width: 102px;
+}
+/* CRM Core */
+
+/* Disable Mitarbeiter on Anfrage View */
+.crm-core-contact-mitarbeiter {
+  display: none;
+}
+
+/* Referenzen admin page */
+.views-field-title-field-editable,
+.views-field-field-ref-anzahl-wohnungen-editable {
+  max-width: 200px;
+}
+.view-referenzen input.text-full {
+  max-width: 200px;
+}
+
+/* Aktuelle Sprache Markieren */
+body.adminimal-skin-material #navigation ul.secondary li.active a.language-link {
+  color: #C61C2C !important;
+  border-bottom: 1px solid #C61C2C;
+  font-weight: bold;
 }

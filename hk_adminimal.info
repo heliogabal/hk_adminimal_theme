@@ -1,7 +1,7 @@
 name = HK Adminimal
 description = Minimalist administration subtheme based on Adminimal.
 core = 7.x
-base theme = adminimal_theme
+; base theme = adminimal_theme
 scripts[] = js/jRespond.js
 scripts[] = js/adminimal_theme.js
 stylesheets[all][] = css/hk_adminimal-custom.css
