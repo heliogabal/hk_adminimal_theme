@@ -421,3 +421,7 @@ function hk_adminimal_table($variables) {
   $output .= "</div>\n";
   return $output;
 }
+
+function hk_adminimal_process_token_tree(&$variables) {
+  $variables['recursion_limit'] = variable_get('token_recursion_limit', 1);
+}
